@@ -1,0 +1,13 @@
+<ion-item>
+  <ion-label>{{ ionic ? 'Ionic' : 'Angular' }} router</ion-label>
+  <ion-toggle [(ngModel)]="ionic"></ion-toggle>
+</ion-item>
+<pre>query params = {{ activatedRoute.snapshot.queryParams | json }}</pre>
+<small>
+  With ion-router-outlet, relative navigation is broken once we navigate using
+  [queryParams]
+</small>
+<ion-content>
+  <ion-router-outlet *ngIf="ionic"></ion-router-outlet>
+  <router-outlet *ngIf="!ionic"></router-outlet>
+</ion-content>
