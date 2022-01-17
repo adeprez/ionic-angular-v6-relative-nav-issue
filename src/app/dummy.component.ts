@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-dummy',
   template: `
-  <ion-content>
+  <ion-content color="light">
     <h1>Route 1</h1>
     <a [routerLink]="[]">Stay on route 1 witout params</a><br>
     <a [routerLink]="[]" [queryParams]="{foo: 'bar'}">Stay on route 1 with query params</a><br>
